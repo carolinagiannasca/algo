@@ -217,6 +217,7 @@ func TestIterarListaVacia(t *testing.T) {
 	})
 	require.EqualValues(t, 0, pares, "Al iterar una lista vacía, no se obtiene resultado")
 }
+
 func TestIterarConCorte(t *testing.T) {
 	numeros := []int{1, 2, 3, 4, 5}
 	lista := TDALista.CrearListaEnlazada[int]()
@@ -257,6 +258,7 @@ func TestRecorrerConIterador(t *testing.T) {
 	}
 	require.PanicsWithValue(t, TDALista.MSG_ITER_TERMINADA, func() { iter.VerActual() }, "Una vez iterada toda la lista no se puede acceder al elemento actual")
 }
+
 func TestInsertarPrincipio(t *testing.T) {
 	numeros := []int{2, 3, 5, 7, 11, 13}
 	lista := TDALista.CrearListaEnlazada[int]()
